@@ -11,7 +11,6 @@ import { ForumComponent } from './forum/forum.component';
 const routes: Routes = [
   {
     path: 'login',
-    pathMatch: 'full',
     component: LoginComponent
   },
   {
