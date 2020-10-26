@@ -15,6 +15,11 @@ const routes: Routes = [
     component: LoginComponent
   },
   {
+    path: '',
+    pathMatch: 'full',
+    component: LoginComponent
+  },
+  {
     path: 'Adminlogin',
     pathMatch: 'full',
     component: AdminLoginComponent
