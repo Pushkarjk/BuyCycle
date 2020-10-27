@@ -13,8 +13,9 @@ import { ForumComponent } from './forum/forum.component';
 import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
-  {path: 'login', component:LoginComponent},
-  {path: '', redirectTo: '/login', pathMatch: 'full'}
+  {path: 'login', component: LoginComponent},
+  {path: '', redirectTo: '/login', pathMatch: 'full'},
+  {path: 'questionnaire', component: QuestionnaireComponent},
 ];
 
 @NgModule({
