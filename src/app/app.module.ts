@@ -10,6 +10,12 @@ import { ProfileComponent } from './profile/profile.component';
 import { InventoryComponent } from './inventory/inventory.component';
 import { QuestionnaireComponent } from './questionnaire/questionnaire.component';
 import { ForumComponent } from './forum/forum.component';
+import { RouterModule, Routes } from '@angular/router';
+
+const routes: Routes = [
+  {path: 'login', component:LoginComponent},
+  {path: '', redirectTo: '/login', pathMatch: 'full'}
+];
 
 @NgModule({
   declarations: [
@@ -24,7 +30,8 @@ import { ForumComponent } from './forum/forum.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    RouterModule.forRoot(routes)
   ],
   providers: [],
   bootstrap: [AppComponent]
