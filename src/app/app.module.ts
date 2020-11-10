@@ -1,3 +1,4 @@
+import { AuthService } from './services/auth.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
@@ -11,6 +12,19 @@ import { InventoryComponent } from './inventory/inventory.component';
 import { QuestionnaireComponent } from './questionnaire/questionnaire.component';
 import { ForumComponent } from './forum/forum.component';
 import { RouterModule, Routes } from '@angular/router';
+import { AngularFireModule } from '@angular/fire';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
+
+const firebaseConfig = {
+  apiKey: 'AIzaSyBzKPx3HADR4lROWMFkvrDTWo8JqUdLslE',
+  authDomain: 'buycycle-50044.firebaseapp.com',
+  databaseURL: 'https://buycycle-50044.firebaseio.com',
+  projectId: 'buycycle-50044',
+  storageBucket: 'buycycle-50044.appspot.com',
+  messagingSenderId: '93493150072',
+  appId: '1:93493150072:web:c4459d82d6715f62df888d',
+  measurementId: 'G-Y8YEFW36WF'
+};
 
 const routes: Routes = [
   {path: 'login', component: LoginComponent},
@@ -32,9 +46,10 @@ const routes: Routes = [
   imports: [
     BrowserModule,
     AppRoutingModule,
+    AngularFireModule.initializeApp(firebaseConfig),
     RouterModule.forRoot(routes)
   ],
-  providers: [],
+  providers: [AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
