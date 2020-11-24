@@ -18,7 +18,8 @@ export class AppComponent implements OnInit{
   logout(){
     this.firebaseService.logout()
     this.isLogout.emit();
-    window.location.reload();
+    window.location.replace("/");
+    // window.location.reload();
   }
 
 }

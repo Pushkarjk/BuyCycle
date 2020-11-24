@@ -4,57 +4,46 @@
 	<title>Questionnaire</title>
 	<meta charset="UTF-8">
 	</head>
-<body>
-	<form name="Questionnaire" method="POST">
-	<span>
-		BuyCycle
-	</span>
-	<span>
-		Questionnaire<br>
-	</span>
-	<br><br>
-		Question 1:
-		<select name="cars" id="cars">
-			<option value="option1">option1</option>
-			<option value="option2">option2</option>
-			<option value="option3">option3</option>
-			<option value="option4">option4</option>
-		</select>
-		<br><br>
-		Question 2:
-		<select name="cars" id="cars">
-			<option value="option1">option1</option>
-			<option value="option2">option2</option>
-			<option value="option3">option3</option>
-			<option value="option4">option4</option>
-		</select>
-		<br><br>
-		Question 3:
-		<select name="cars" id="cars">
-			<option value="option1">option1</option>
-			<option value="option2">option2</option>
-			<option value="option3">option3</option>
-			<option value="option4">option4</option>
-		</select>
-		<br><br>
-		Question 4:
-		<select name="cars" id="cars">
-			<option value="option1">option1</option>
-			<option value="option2">option2</option>
-			<option value="option3">option3</option>
-			<option value="option4">option4</option>
-		</select>
-		<br><br>
-		Question 5:
-		<select name="cars" id="cars" >
-			<option value="option1">option1</option>
-			<option value="option2">option2</option>
-			<option value="option3">option3</option>
-			<option value="option4">option4</option>
-		</select>
-	<br>
-	<br>
-		<button type="Submit"> <a href="profile"> submit the Questionnaire  </a></button>
-	</form>
+<body style="text-align: center;">
+    <div class="container col-lg-6" *ngIf="isSignedIn" (isLogout)="handleLogout()" name="Questionnaire" method="POST">
+      <div style="margin-top: 10%">
+        <h1>Questionnaire</h1>
+      </div>
+        <div class="form-group">
+          <p> What will you use your bike for? </p>
+          <select class="form-control" name="cars" id="cars">
+            <option value=""></option>
+            <option value="option1">Commuting</option>
+            <option value="option2">Fitness</option>
+            <option value="option3">Joyriding</option>
+          </select>
+          <br><br>
+        </div>
+        <div class="form-group">
+          <p> In what environment will you use your bike? </p>
+          <select class="form-control" name="cars" id="cars">
+            <option value=""></option>
+            <option value="option1">Mostly flat open road</option>
+            <option value="option2">City</option>
+            <option value="option3">Woods</option>
+          </select>
+          <br><br>
+        </div>
+        <div class="form-group">
+          <p> How much would you like to spend? </p>
+          <select class="form-control" name="cars" id="cars">
+            <option value=""></option>
+            <option value="option1">Less than $500</option>
+            <option value="option2">Between $500 and $2000</option>
+            <option value="option3">More than $2000</option>
+          </select>
+          <br><br>
+        </div>
+        <div class="mb-3">
+        </div>
+        <div class="text-center"><button type="submit"> <a href="profile" class="txt2 hov1">
+          Get the bike
+        </a></button></div>
+    </div>
 </body>
 </html>
